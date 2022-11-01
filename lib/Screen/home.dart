@@ -42,14 +42,18 @@ class _HomePageState extends State<HomePage> {
               itemCount: snapshot.data?.length,
                 itemBuilder: (context,index){
                 return Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 20.0,),
+                  padding: const EdgeInsets.symmetric(horizontal: 10.0),
                   child: Card(
                     child: Column(
                       children: [
                         Text('id: ${snapshot.data![index].id}'),
                         Text('user: ${snapshot.data![index].userId}'),
-                        Center(child: Text('title: ${snapshot.data![index].title}')),
-                        Center(child: Text('body: ${snapshot.data![index].body}')),
+                        Text('title: ${snapshot.data![index].title}'),
+                        Text('body: ${snapshot.data![index].body}'),
+                        SizedBox(
+                          height: 20.0,
+                        ),
+
                       ],
                     ),
                   ),
