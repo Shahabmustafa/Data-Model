@@ -44,6 +44,7 @@ class _ExampleThreeState extends State<ExampleThree> {
                   return Column(
                     children: [
                       Text(data.id.toString()),
+                      Text(data.name.toString()),
                     ],
                   );
                 });
