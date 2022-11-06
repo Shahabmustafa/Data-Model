@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:json/Model/model.dart';
-import 'package:json/Screen/example_three.dart';
-import 'package:json/Screen/home.dart';
-import 'package:provider/provider.dart';
-
-import 'Provider/example_two_provider.dart';
-import 'Screen/example_two.dart';
+import 'package:json/Screen/comment_page.dart';
+import 'package:json/Screen/todo.dart';
+import 'package:json/Screen/user_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -22,7 +18,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: ExampleThree(),
+        home: UserPage(),
     );
   }
 }

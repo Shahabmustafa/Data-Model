@@ -1,4 +1,4 @@
-class Postmodel {
+class User {
   int? id;
   String? name;
   String? username;
@@ -8,7 +8,7 @@ class Postmodel {
   String? website;
   Company? company;
 
-  Postmodel(
+  User(
       {this.id,
         this.name,
         this.username,
@@ -18,7 +18,7 @@ class Postmodel {
         this.website,
         this.company});
 
-  Postmodel.fromJson(Map<String, dynamic> json) {
+  User.fromJson(Map<String, dynamic> json) {
     id = json['id'];
     name = json['name'];
     username = json['username'];
