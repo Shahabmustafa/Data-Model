@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:state_management/Provider/counter_provider.dart';
+import 'package:state_management/Provider/favourite_provider.dart';
 import 'package:state_management/Provider/slider_provider.dart';
 import 'package:state_management/Screen%20Provider/counter_example.dart';
+import 'package:state_management/Screen%20Provider/favourit_example.dart';
+import 'package:state_management/Screen%20Provider/slider_example.dart';
 import 'package:state_management/Screen/home_screen.dart';
 import 'package:state_management/Screen/state_full_widget.dart';
 import 'package:state_management/Screen/date_time.dart';
@@ -21,6 +24,7 @@ class MyApp extends StatelessWidget {
         providers: [
           ChangeNotifierProvider(create: (_) => CounterProvider()),
           ChangeNotifierProvider(create: (_) => SliderProvider()),
+          ChangeNotifierProvider(create: (_) => FavouriteItemProvider()),
         ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
@@ -28,7 +32,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: CounterExample(),
+        home: FavouritePage(),
       ),
     );
     
